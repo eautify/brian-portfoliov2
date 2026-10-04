@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Brian Balili — Portfolio
 
-## Getting Started
+A personal portfolio for my work across full-stack software and connected hardware. It brings together selected projects, my internship experience, technical toolkit, and a few things I enjoy away from the keyboard.
 
-First, run the development server:
+## Features
+
+- Responsive portfolio with dark and light themes
+- Selected projects linked to their live deployments
+- Experience timeline with current availability
+- Terminal-inspired technical toolkit
+- Away from Keyboard dialog with personal interests
+- Email copy button and accessible motion preferences
+
+## Built with
+
+- Next.js App Router
+- React and TypeScript
+- Tailwind CSS
+- Lucide React icons
+
+## Run locally
+
+Install [Node.js](https://nodejs.org/) and npm, then run:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the development server |
+| `npm run build` | Build the production app |
+| `npm run start` | Start the production server |
+| `npm run lint` | Run ESLint |
 
-## Learn More
+## Project structure
 
-To learn more about Next.js, take a look at the following resources:
+- `app/page.tsx` — portfolio sections and project content
+- `app/ui.tsx` — theme toggle, Away from Keyboard dialog, and email copy button
+- `app/globals.css` — layout, responsive styles, themes, and animations
+- `app/layout.tsx` — root layout, fonts, and site metadata
+- `public/` — logo and image assets
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The site can be deployed to [Vercel](https://vercel.com/) or another platform that supports Next.js. See the [Next.js deployment guide](https://nextjs.org/docs/app/building-your-application/deploying) for details.
