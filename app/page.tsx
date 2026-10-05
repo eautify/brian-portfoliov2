@@ -4,6 +4,17 @@ import { AboutModalTrigger, CopyEmailButton, ThemeToggle } from "./ui";
 const projects = [
   {
     number: "01",
+    title: "JokeFM",
+    url: "https://joke-fm.vercel.app/",
+    repository: "https://github.com/eautify/JokeFM",
+    label: "COMEDY RADIO & JOKE DISCOVERY",
+    description:
+      "A browser-based comedy radio and joke discovery app with a queue player, speech synthesis, favorites, games, and an API playground.",
+    stack: ["React", "TypeScript", "Vite", "JokeAPI"],
+    icon: Terminal,
+  },
+  {
+    number: "02",
     title: "Vendora",
     url: "https://project-vendora.vercel.app",
     label: "FULL-STACK POS",
@@ -13,7 +24,7 @@ const projects = [
     icon: Terminal,
   },
   {
-    number: "02",
+    number: "03",
     title: "IoT Smart Incubator",
     url: "https://eggincubator.online",
     label: "UNDERGRADUATE THESIS",
@@ -102,18 +113,19 @@ export default function Home() {
         <SectionLabel number="01">SELECTED WORK</SectionLabel>
         <div className="section-intro"><p>A few things I&apos;ve been building<br />and thinking about.</p><span>2023 — 2025</span></div>
         <div className="project-list">
-          {projects.map(({ number, title, url, label, description, stack, icon: Icon }) => (
-            <a className="project-card" key={title} href={url} target="_blank" rel="noreferrer" aria-label={`Visit ${title} deployment (opens in a new tab)`}>
+          {projects.map(({ number, title, url, repository, label, description, stack, icon: Icon }) => (
+            <article className="project-card" key={title}>
               <div className="project-index">/{number}</div>
               <div className="project-icon"><Icon size={21} strokeWidth={1.5} /></div>
               <div className="project-content">
                 <p className="project-label">{label}</p>
-                <h3>{title}</h3>
+                <h3><a href={url} target="_blank" rel="noreferrer" aria-label={`Visit ${title} deployment (opens in a new tab)`}>{title}</a></h3>
                 <p className="project-description">{description}</p>
                 <ul className="tag-list" aria-label={`${title} technologies`}>{stack.map((item) => <li key={item}>{item}</li>)}</ul>
+                {repository && <a className="project-repository" href={repository} target="_blank" rel="noreferrer">SOURCE CODE ↗</a>}
               </div>
-              <span className="project-arrow" aria-hidden="true"><ArrowUpRight size={18} /></span>
-            </a>
+              <a className="project-arrow" href={url} target="_blank" rel="noreferrer" aria-label={`Visit ${title} deployment (opens in a new tab)`}><ArrowUpRight size={18} /></a>
+            </article>
           ))}
         </div>
       </section>
